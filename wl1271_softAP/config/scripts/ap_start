@@ -1,0 +1,13 @@
+# Script to start AP MODE on TI WLAN
+
+rm /data/misc/wifi/tiwlan*
+sleep 2
+insmod /system/etc/wifi/softap/tiap_drv.ko
+sleep 2
+start wlan_ap_loader
+sleep 2
+ifconfig tiap0 10.1.14.1 netmask 255.255.255.0  up
+sleep 2
+start hostapd
+start udhcpd
+echo 1 > /proc/sys/net/ipv4/ip_forward
