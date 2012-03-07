@@ -1,3 +1,5 @@
+This Driver was customized for Optimus MACH based on zoom2 wl1271 Driver.
+
 make CROSS_COMPILE=arm-none-linux-gnueabi- ARCH=arm HOST_PLATFORM=zoom2 KERNEL_DIR=$KERNEL_DIR
 
 Use this command in ./wl1271/os/linux/ and ./wl1271_softAP/os/linux/
